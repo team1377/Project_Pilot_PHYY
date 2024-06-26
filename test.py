@@ -93,7 +93,7 @@ def app():
     # '전송' 버튼 클릭 시 동작
     if st.button("메시지 전송"):
         # 모델에 사용자 입력 전달하여 응답 생성
-        response = model.generate_content(user_input)
+        response = gemini_model.generate_content(user_input)
         # 생성된 응답 출력
         response_text = response.candidates[0].content.parts[0].text
         st.write(response_text)
